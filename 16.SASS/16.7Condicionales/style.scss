@@ -1,0 +1,21 @@
+$primerColor: gray;
+$segundoColor: red;
+
+body{
+ background-color: $primerColor;
+}
+
+h2{
+    color:red
+}
+
+h2{
+    @if $primerColor == white {
+        color:blue
+    }@else if $primerColor == gray{
+        color: black;
+    }@else{
+        color:green
+    }
+
+}

@@ -1,0 +1,38 @@
+
+#header{
+    text-align: center;
+    
+}
+#wrap{
+    display:flex;
+    flex-flow: wrap row;
+    border:1px solid green;
+    padding:5px;
+}
+.caja{
+    flex-grow: 1;
+    /* flex-basis: calc((100% / 3) - 70px); */
+    border:1px solid black;
+    margin:10px;
+    text-align: center;
+    padding:20px
+}
+.roja{
+    flex-basis: 100%;
+    order:2;
+    background-color: red;
+}
+.verde{
+    
+    flex-shrink: -4;order:1;
+    background-color: green;
+}
+.gris{
+    
+    order:-1 ;
+    background-color: gray;
+}
+.azul{
+    order: -2;
+    background-color: blue;
+}

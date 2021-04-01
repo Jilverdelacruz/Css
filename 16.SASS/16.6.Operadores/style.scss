@@ -1,0 +1,13 @@
+$contenedorGeneral: 1500px;
+$cantidadCajas:5px;
+
+.general{
+    border: 2px solid red;
+    width: $contenedorGeneral;
+    margin: auto;
+    .tarjeta{
+        width: $contenedorGeneral / 2800px * 100%;
+        border: 1px solid green;
+        height: 40px;
+    }
+}

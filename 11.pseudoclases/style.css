@@ -1,0 +1,24 @@
+.lista  li:first-child {
+    color: red;
+}
+.lista  li:nth-child(2){
+     color: blue
+ }
+.lista  li:last-child{
+     color: brown
+ }
+
+.lista2 li a:link{
+    color: red;
+}
+.lista2 li a:visited{
+    color: rgb(68, 0, 255);
+}
+.lista2 li a:hover{
+ color: brown;
+}
+
+input[type="text"]:focus{
+ border:2px dashed rgb(212, 66, 66);
+ outline: none;
+}

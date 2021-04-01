@@ -1,0 +1,254 @@
+1.selectores
+1.1 selector universal *
+1.2 selector de etiqueta
+1.3 selector id #
+1.5 selector clase .
+1.6 selector atributo
+input[type="text"]{ se está llamando a elemento input con el atributo text
+    margin-top: 15px;
+}
+h1[id^="ti"]{
+    color: blueviolet;
+}
+
+se esta llamando a cada elemento del form para poder aplicar el block
+#formulario form *{
+    display: block
+}
+1.7 selector hijo
+.menu > li > a{
+    color: black;
+}
+con el signo mayor se indica específicamente quien es el padre y el hijo que se aplicara
+1.8 Prioridad
+.nuevo h3{
+    background: brown  tiene mas prioridad el más especifico
+}
+.nuevo{
+    background: red !important ,  lal unica manera que este predomine es colocarle  !important
+}
+FUENTE Y COLORES
+fuentes
+font-family:Arial, Helvetica, sans-serif; colocar tipo de letra
+font-size: 100px; tamaño de la letra
+font-weight:(lighter,bold, 900) delgada,grueso y colocar un numero de grosor
+font-style: italic, normal; colocar cursiva
+PODEMOS IMPORTAR FUENTE LINK https://fonts.google.com/
+usualmente se utiliza la regular
+@font-face{ 
+    font-family: Prueba; con este nombre lo llamamre donde queramos
+    src: url(Montserrat/Montserrat-Regular.ttf);
+}
+ COLORES
+ colores hexadecimales
+ colores rgb
+ colores rgba (aqui incluye la trasnparencia) https://www.css3maker.com/css-3-rgba.html
+ FONDOS Y TEXTOS
+    background-image: url(fondo3.jpg); colocar imagen de fondo
+     background-repeat: no-repeat; no repite la imagen
+     background-size: 100% ; tamaño de la pantalla 
+     background-attachment:fixed; para que se quede quieta en scrool
+     background-position ???: left bottom; a posición de la imagen de fondo
+     background-position: -200px -200px; tambien le puedes dar ( x, y)
+TEXTOS
+list-style: es para quitar el estilo de punto en las li pero tambien puedes cambiar de forma como (circle, square)
+text-align: center, right, left, justify ; centrar texto o imagen puede justificar el parrafo para que se vean mejor los parrafos
+line-height: 90px;   separado entre las lineas
+text-decoration: line-through,underline  tachado, y raya abajo
+letter-spacing: 4px; separar entre letras
+    word-spacing: 8px; separar entre palabras
+text-transform: uppercase lowercase;  mayuscula minuscula
+veritical-align ????
+text-indent: 5px; agregar  sangría
+MODELOS Y POSICIONAMIENTO
+MARGENES
+SI EN CASO NO DESEAS UTILIZAR EL PADDING PORQUE AVECES DESCUADRA LOS BLOQUES, PUEDE UTILIZAR EL TAMAÑO DEL BLOQUE 
+height, Y UTILIZAR UN LINE-HEIGHT
+EN LOS MARGENES TAMBIEN SE PUEDE COLOCAR NEGATIVO.
+margin: 10px 10px 40px 200px (ARRIBA, DERECHA, ABAJO, IZQUIERZ)
+margin-top: 20px; puede colarse de esta manera }
+max-width: 350px;
+min-width: 100px;
+line-height: 240px; posicionas el contenido verticalmente
+padding-top: 100px; puede colocar right, left, top, bottom al igual que los margenes
+PARA POSICIONAR EN FORMA HORIZONAL SE NECESITA QUE SE CONSIDERE COMO CAJA
+display:block, inline   (bloque como el div, no bloque como el p, a, etc), sirve cuando utilizamos el un menu 
+el elemento a lo podemos convertir en block para que todo el bloque puedas seleccionar y no solo la letra
+float:left,right  (se pone en linea horizontal una vez se convsidere bloque)
+Cuando quieres quitar el float a los siguientes elementos se crea un div vacío
+y se le agregar
+float: none; desactivamos el flotante
+clear: both; limpiamos los flotantes de todos lados
+opacity:  puede ser 0 = transaprencia 1 = color sólido
+margin:auto PODREMOS CENTRAR LA CAJA HORIZONTALMENTE
+SI EN CASO NO  FUNCIONA EL FLOAT VERIFICAR QUE EL ANCHO SEA MENOR que del contenedor general
+CUANDO NO LE PONES UN FONDO  Y NO TE DEJA ES PORQUE DEBE ESTAR
+ACTIVADO ANTES UN FLOAT
+
+SOMBRAS Y BORDES RADIUS
+texto SOMBRAS
+text-shadow: -3px -4px 5px black; 
+box-shadow: -3px -4px 5px black inset; INSET ES OPCIONAL SOMBRA INTERNA
+( eje x (negativo izquierda, positivo derecha), eje y (negativo arriba, positivo abajo) densidad, color)
+BORDES
+border-radius: 999px;  SE ES UN CUADRADO LO PASARÁS A CIRCULO
+border-radius: 10px 20px 15px 60px;  (izquierda superior, derecha superior, abajo derecho, abajo izquierdo)
+POSICIONAMIENTO y overflow
+overflow: hidden;  (HIDDEN corta el texto depende al tamaño de caja, VISIBLE, SCROLL)
+overflow: scroll; ( puede ser -x para scroll horizonal o -y verifical)
+POSICIONAMIENTO
+position: absolute;  absoluta no intersa como está el retro lo puede moder a tu preferencia
+    top: 51%;   
+    left: 41%; o se le agrega un display block para poder moverlo a gusto
+position: fixed ; se usa usualmente para imagenes cuando se haga scroll la imagen se queda pegada y te sigue.
+PSEUDOCLASES
+.lista  li:first-child  amarra solo la primera del li
+.lista  li:nth-child(2) el numero de orden del li
+.lista  li:last-child el ultimo del li
+.lista2 li a:link cuando aun no se ha hecho click
+.lista2 li a:visited cuando ya se hizo click
+.lista2 li a:hover cuando pasas por el link
+input[type="text"]:focus cuando ingresas al input
+input[type="submit"]:active cuando mantienesp presionado
+PSEUDOELEMENTOS
+
+
+TRANSICIONES
+transition: all 500ms; todo los cambios en 500 milisegundos
+transition: border-radius 15s, background-color 5s; tambien se puede poner varios pero 
+se hace en el primero la transition no al bloque que ya tiene el  cambio
+ANIMACIONES
+background: linear-gradient(to bottom, #3eb8e5 0%, #2ca0ca 100%) indica que desde abajo hsta el 100% cambia de color
+@keyframes prueba{  PRIMERO SE LLAMA Y POR % LE PONES UNA TRANFORMACION 
+    0%{
+        margin-left: 0px;
+    }
+    50%{
+        margin-left:1200px;
+        transform: rotate(0deg); empieza a rotar  /*si lo conviertes en bloque puede colocarle transform: scale(1.2, 1.2) aumnenta tamaño sin afectar margenes o algo demás*/
+        border-radius: 199px; se convierte en circulo y rueda
+    }
+    100%{
+        margin-left: 0px;
+    }
+}
+LUEGO EN EL BLOQUE SE PUEDE aplicar
+animation-name: prueba; LLAMAR A LA ANIMACION CREADA
+animation-duration: 10s; LA DURACION DE LA ANIMACION
+animation-iteration-count: infinite; la iteracion de es forma infinita
+animation-timing-function: linear; que siempre se mantengan en una misma velocidad
+
+NOTA:
+SI QUIERES LIMPIAR SOLO EL FLOTANTE Y LUEGO SEGUIR 
+simplemente se pone en la clase clear:both para limpiar y en el siguiente bloque  seguirá siendo flotante.
+REPONSIVE
+Todas las medidas se debería usar con porcentaje
+MEDIAS QUERY
+@media (max-width: 388px) nos indica que desde 0 a 388px ejecutará un cambio
+VIEW PORT 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> para el tamaño de contenido se adapte al tamaño del dispositivo
+
+SASS
+sass --watch estilo.scss setyle.css  siempre estará viendo los cambios
+VARIABLES
+$colorPrimario: red;
+$familiaLetras: sans-serif;
+ANIDADIONES
+.general{
+    h2{
+        color:blue  puedes llamar a otro selector dentro de otro de esta manera
+    }
+MODULOS
+primero tenemos que crear scss con guiones  (_cabecera.scss)
+@use 'cabecera';  y luego se importa en el archivo principal
+MIXIN
+son funciones es decir un conjunto de instruccions para luego poder llamarlos
+@mixin funcionParametros($color, $tamano, $sombra ){
+    color:$color;
+    font-size: $tamano;
+    box-shadow: 2px 2px 3px $sombra;
+    width: 150px
+}  se  puede poner parámetros en la funcion 
+#menu{
+    @include funcionParametros(red, 13px, green ) así se llama la funcion
+}
+HERENCIAS
+es cual que las funciones pero no se coloca parametros
+%funcionHerencia
+.general{
+    @extend %funcionHerencia;   se llama con extend  %
+}
+Operadores{
+     width: $contenedorGeneral / 2800px * 100%;  puede operar entre variables y datos
+}
+CONDICIONALES
+@if ...{
+
+}@else if {
+
+}@else {}
+BUCLES
+$contador: 1;
+
+    @for $contador from 1 through 6{  desde hasta
+        .menu ul li:nth-child(#{$contador}){  elige los numero de li
+            color: lightblue;
+            font-size: $contador * 5px;
+        }
+        
+    }
+FLEXBOX
+Cuando se quiere empezar utilizar se debe colocar un div.
+display: flex alinea los bloques hijo en fila
+display:inline-flex; alinea los bloques en fila y el div se acomoda a los bloques hijos
+flex-wrap: wrap; hace que los bloques no se salga del contenedor
+flex-direction: row; lo acomoda en fila por defecto
+flex-direction: row-reverse; los acomoda en fila pero del ultimo al primero y de izquierda a derecha
+flex-direction: column-reverse; ordena por columa del ultimo al primero
+flex-direction: column; los ordena por columna al realizar esto, se invierte el justify-content: y el align-items
+flex-flow: wrap row-reverse; con esto acabarca los wrap y direction
+order:-1 se puede utilizar cuando ningun bloque tiene un order y quieremos ponerlo primero, si en caso se le pone un order se le da un número a cada boque
+flex-grow: 1; se aplica a los div hijos y le das un tamaño estandar a todos o le puedes dar un tamaño diferente a cada caja
+Para poner mas pequeños las cajas se utiliza dos:
+flex-grow:0
+flex-basis: calc((100% / 3) - 70px); es igual que el with se le da la anchura que se necesita pero no es automatico como el grow
+Alineciación Horizonal
+justify-content: space-between; no deja margen a los extremos
+justify-content: space-around; deja margen a los extremos
+justify-content: space-evenly; igual que el around pero con un poco de mrgen adcional
+justify-content: center; centrado
+justify-content: flex-end; a la izquierda
+Alineacion vertical
+Cuando lo haces desde el div padre
+align-items: center;  centras todas las cajas hijas
+align-content: center, se aplica cuando son mas de dos filas hijas los junta todas.
+align-items: flex-end; pones al ultimo todas las cajas  hijas  
+align-items: flex-start; pones al principio todas las cajas hijas
+align-items: flex-baseline; se alinean al texto
+Cuando lo haces desde el div hijo
+align-self: flex-start; para que la caja hija se falla al innicio
+align-self: flex-end;  para que la caja hija se falla al final
+align-self: center;  para que la caja hija se falla al centro
+GRID 
+sno ayuda maquetar a la web y se trabja con div padre
+display: grid; en el div padre colocar le display
+grid-template-columns: repeat(3, 1fr); indica que que abrá 3 columnas con 1fr equivalente para cada columna
+grid-template-rows: 2fr 2fr; indica habrá 2 filas  de igual tamaño
+grid-auto-rows: 1fr; en el ejemplo anterior solo maquete 2 filas si tengo mas bloques podría colocarle una distrución adicional como este indica que a paqrtir de la tercera fila equivale a 1fr
+column-gap: 10px; separación entre los bloques hijos (a nivel de columnas)
+row-gap:20px; separación entre los bloques hijos (a nivel de filas)
+grid-gap:20px indica la separacion ente bloques el mismo para fila y columna
+PARA EXPANDAR LOS BLOQUES TENEMOS QUE ENTENDER QUE LAS GRILLAS VIENEN A SER LA LINEA DE SEPARACION ENTRE LOS BLOQUES
+grid-column-start:3;  desde la grilla 3 (columna)
+grid-column-end:4 ; hasta la grilla 4 (columna)
+grid-column: 2 / 4; es lo mismo pero resumido
+grid-row-start: 2; desde la grilla 2 (fila)
+grid-row-end: 5; hasta la grilla 5 (fila)
+rid-row: 2 / 5; es lo mismo pero resumido
+align-content: center; si le pones un tamañ espefifico al height de los bloques en el dive padre lo colocas para centrarlo como el flex a nivel de fila
+justify-content: center; puedes centrarlo a nivel de columna
+grid-template-areas:  reemplaza a los grid-colum y grid row
+    "cabecera cabecera cabecera" indica que la primera fila ocupara 3 columanas
+    ". menu ." indica que la segunda fila hay un bloque de vacio al inicio y al final
+    " contenido1 contenido2 lateral"
+    "pie pie pie"

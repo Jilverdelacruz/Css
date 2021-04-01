@@ -1,0 +1,12 @@
+$colorPrimario: red;
+$familiaLetras: sans-serif;
+$colorsecundario: blue;
+.container{
+ background-color: $colorPrimario
+}
+.container h2{
+    font-family: $familiaLetras;
+}
+p{
+    color:$colorsecundario
+}

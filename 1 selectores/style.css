@@ -1,0 +1,43 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+h1{
+    color: brown;
+}
+p a{
+    color: chartreuse;
+}
+#contenido,
+#titulo
+{
+    border: 2px solid #7367f0;
+    padding: 2px;
+}
+#formulario form{
+    border: 2px dashed red;
+    
+}
+#formulario form *{
+    display: block
+}
+input[type="text"]{
+    margin-top: 15px;
+}
+
+a{
+    color: red;
+}
+
+.menu > li > a{
+    color: black;
+}
+.nuevo h3{
+    background: brown
+}
+h3{
+    background: red !important;
+}
+h1[id^="titulo"]{
+    color: blueviolet;
+}

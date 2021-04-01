@@ -1,0 +1,8 @@
+%funcionHerencia{
+    color:green;
+    box-shadow: 2px 2px 2px red;
+    border: 2px solid black
+}
+.general{
+    @extend %funcionHerencia;
+}

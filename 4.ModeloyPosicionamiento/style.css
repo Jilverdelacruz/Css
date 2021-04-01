@@ -1,0 +1,32 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#caja1, #caja2{
+    border:4px solid lightblue;
+    width: 250px;
+    height: 250px;
+}
+#caja1{
+    margin: 10px 10px 40px 200px;
+    margin-top: 20px;
+    max-width: 350px;
+    min-width: 100px;
+    font-weight: bold;
+    text-align: center;
+    
+}
+#caja1 > p{
+    line-height: 240px;
+}
+#caja2{
+    padding-top: 100px;
+    padding-left: 200px;
+}
+.box{
+    float: left;
+}
+.clearfloat{
+    float: none;
+    clear: both;
+}

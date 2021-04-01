@@ -1,0 +1,416 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+body{
+    background-image: url(img/pattern.png);
+}
+@font-face{
+    font-family: Bebas ;
+    src: url(fonts/BebasNeue.otf);
+    font-weight: normal;
+    
+}
+@font-face{
+    font-family: Trebuchet;
+    src: url(fonts/TrebuchetMS.ttf);
+    font-weight: normal;
+}
+#cabecera{
+    width: 100%;
+    height: 70px;
+    background-color: black;
+}
+.contenedor{
+    width: 1200px;
+    margin: auto;
+    font-family: Bebas;
+    letter-spacing: 2px;
+}
+#logo{
+    display:block;
+    float: left;
+    color: white;
+    background-color: #37BCF9;
+    width: 200px;
+    height: 55px;
+    line-height: 55px;
+    margin-top: 7px;  
+    border-radius: 20px; 
+}
+#logo span{
+    font-size:30px;
+    display: block;
+    float: left;
+    margin-left: 40px;
+}
+
+#logo h1{
+    
+    display: block;
+    float: right;
+    margin-right: 40px;
+   
+}
+#menu{
+    display: block;
+    float: right;
+    
+}
+
+#menu ul li{
+    display:block;
+    float: left;
+    list-style: none;
+    
+}
+#menu ul li a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding-left: 40px;
+    height: 67px;
+    line-height: 70px;
+    font-size: 22px;
+    transition: all 400ms;
+}
+#menu ul li a:hover{
+    color:#37BCF9;
+    transform: scale(1.2, 1.2);
+}
+
+
+#capaTitulo{
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    margin-top: 22px;
+    padding: 10px;
+    border:1px solid rgb(168, 166, 166);
+    box-shadow: 2px 2px 3px black;
+}
+#titulo{
+    background-image: url(img/bakbaner.png);
+    background-position: -200px -200px;
+    height: 100px;
+}
+#titulo h2{
+  text-align: center;
+  line-height: 100px;
+  font-size: 43px;
+  color: white;
+  font-weight: lighter;
+  text-shadow: 2px 2px 2px black;
+}
+.tarjeta{
+    
+    margin-top: 40px;
+    width: 17%;
+    float: left;
+    margin-left: 22px;
+    background-color: white;
+    border:1px solid gray;
+    box-shadow: 1px 1px 1px black;
+    text-align: center;
+    padding: 6px;
+    font-family: Trebuchet;
+    height: 300px;
+    border-radius: 4px 4px 4px 4px;
+    
+}
+
+.tarjeta span{
+    font-size: 80px;
+    
+}
+.tarjeta h3{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 17px;
+    font-weight: bold;
+    color: #00539E;
+}
+
+.tarjeta p{
+    font-size: 15px;
+    color: #00539E;
+}
+.clear{
+    float: none;
+    clear: both;
+}
+#principal{
+    margin-top: 50px;
+    width: 100%;
+}
+#articulos{
+    display: block;
+    width: 70%;
+    float: left;
+    
+}
+#articulos span{
+    display: block;
+    float:right;
+    width: 250px;
+    height: 32px;
+    line-height: 36px;
+    text-align: center;
+    background-color: gray;
+    border-radius: 0px 0px 0px 8px;
+
+
+}
+#articulos h2{
+    
+    display: block;
+    height: 52px;
+    width: 100%;
+    background-color: gray;
+    line-height: 52px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: lighter;
+    
+}
+.articulo{
+    margin-top: 50px;
+    display: block;
+    width: 98.4%;
+    height: 140px;
+    border:1px solid gray;
+    box-shadow: 1px 1px 2px gray;
+    background-color: white;
+}
+.articulo article {
+    display: block;
+    width: 100%;
+    padding: 7px;
+}
+.articulo:last-child {
+    line-height: 140px;
+    text-align: center;
+}
+.articulo:last-child article h3 a {
+    font-size: 70px;
+}
+.articulo article h3{
+    font-size: 26px;
+    color:#00539E;
+    margin-bottom: 10px;
+    
+}
+
+.articulo article a{
+  text-decoration: none;
+  color:#00539E
+}
+
+#lateral{
+    display: block;
+    width: 25%;
+    float: right;
+    
+}
+#lateral label{
+    display: block;
+    height: 30px;
+    font-size: 30px;
+    background: url(img/pxgray.png),white;
+    margin-bottom: 20px;
+    text-align: center;
+}
+#lateral h3{
+    display: block;
+    height: 30px;
+    font-size: 30px;
+    background: url(img/pxgray.png),white;
+    margin-bottom: 20px;
+    font-weight: lighter;
+    text-align: center;
+}
+form{
+    margin-bottom: 20px;
+   
+}
+#search{
+    display: block;
+    width: 90%;
+    margin:auto;
+    border: 1px solid gray;
+    height: 25px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px gray inset;
+    
+}
+#search input[type='text']{
+    outline: none;
+    width: 81%;
+    height: 25px;
+    border:none;
+    background-color: transparent;
+    padding-left: 7px;
+    
+}
+#search input[type='text']:focus{
+    color: black;
+    
+}
+#search button{
+    width: 14%;
+    height: 25px;
+    background-color:transparent;
+    border:none;
+    border-left: 1px solid gray;
+    cursor: pointer;
+
+}
+
+#login{
+    border:1px solid gray;
+    box-shadow: 0px 0px 3px gray, 1px 1px 2px rgb(31, 30, 30), 2px 2px 2px gray;
+    padding-top:15px ;
+    border-radius: 5px;
+    background-color: white;
+}
+
+
+#login input[type='text'],
+#login input[type='email'],
+#login input[type='password']{
+    width: 80%;
+    height: 25px;
+    display: block;
+    margin:auto;
+    padding-left: 25px;
+    outline: none;
+}
+#login #user{
+    position: absolute;
+    display:block;
+    margin-left: 20px;
+    margin-top: 4px;
+}
+#login #password{
+    position: absolute;
+    display:block;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+#login input[type='password']{
+    
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#login input[type='submit'],
+#login input[type='button']{
+ border:none;
+ height: 40px;
+ font-size: 90%;
+ width: 41%;
+ background: linear-gradient();
+ color: white;
+ border-top: 1px solid black;
+ border-bottom: 1px solid black;
+ background: linear-gradient(to bottom, #3eb8e5 0%, #2ca0ca 100%);
+ margin-left: 5%;
+ transition: all 300ms;
+}
+#login input[type='submit']:hover,
+#login input[type='button']:hover{
+box-shadow: 0px 0px 3px gray;
+}
+#link{
+    padding: 8px;
+}
+#link a{
+    text-decoration: none;
+    color: #00539E;
+    display: block;
+    text-align: left;
+    margin-left: 10px;
+}
+#social a{
+    margin-bottom: 12px;
+    display: block;
+    font-size: 35px;
+    color:#00539E ;
+    text-align: center;
+}
+.vacio{
+    border:1px solid gray;
+    box-shadow: 0px 0px 3px gray, 1px 1px 2px rgb(31, 30, 30), 2px 2px 2px gray;
+    padding-top:15px ;
+    border-radius: 5px;
+    background-color: white;
+    height: 510px;
+}
+#pie{
+    margin-top: 40px;
+    padding-top: 40px;
+    width: 100%;
+   background-color: black;
+    
+}
+.bloquef{
+  width: 31%;
+  float: left;
+  height: 430px; 
+}
+.bloquef:nth-child(2){
+    margin-left: 40px; 
+    margin-right: 40px;
+  }
+.backf {
+    display: block;
+    background: url(img/pxgray.png),white;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 40px;   
+}
+.bloquef ul{
+    margin:25px
+}
+.bloquef ul li{
+    color:gray;
+    margin-top: 50px; 
+    border-bottom: 1px solid gray;
+}
+
+.bloquef ul li p{
+    color: #37bcf9;
+    font-size: 25px;
+}
+iframe{
+    width: 100%;
+    height: 380px;
+}
+#imgHtml{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+#navegadores {
+    text-align: center;
+  }
+#navegadores img{
+margin-top: 30px;
+margin-bottom: 30px;
+  width: 42px;
+  height: 42px;
+}
+
+#autor{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+
+
+
+
+    

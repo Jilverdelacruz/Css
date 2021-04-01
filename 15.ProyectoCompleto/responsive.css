@@ -1,0 +1,55 @@
+@media (max-width:1254px){
+    .contenedor{
+        width: 90%;
+        margin: auto;
+    }
+    .tarjeta{
+        margin-left: 11%;
+    }
+    .tarjeta:nth-child(4){
+        margin-left: 28%;
+    }
+    .bloquef{
+        width: 25%;
+    }
+    .backf {
+        font-size: 230%;   
+    }
+    .bloquef:nth-child(2){
+        width: 35%;
+        margin-left: 7%; 
+        margin-right: 7%;
+    }
+    #navegadores img{
+          width: 14%;
+          height: 14%;
+    }
+
+}
+@media (max-width:1130px){
+    #capaTitulo{
+        width: 80%;
+        margin:auto   
+    }
+    #titulo h2{
+        font-size: 200%; 
+    }
+    #lateral label{
+        height: 30px;
+        font-size: 170%;  
+    }
+    #search input[type='text']{
+        outline: none;
+        width: 80%;
+        height: 25px;
+        border:none;
+        background-color: transparent;
+        padding-left: 7px;
+    }
+    .backf {
+        font-size: 170%;   
+    }
+    #imgHtml img{
+     width: 90%;
+    }
+}

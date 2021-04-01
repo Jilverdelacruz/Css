@@ -1,0 +1,11 @@
+$contador: 1;
+
+    @for $contador from 1 through 6{
+        .menu ul li:nth-child(#{$contador}){
+            color: lightblue;
+            font-size: $contador * 5px;
+        }
+        
+    }
+    
+

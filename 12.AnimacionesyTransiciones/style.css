@@ -1,0 +1,16 @@
+#boton{
+    text-decoration:none;
+    background-color: brown;
+    padding: 15px;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    transition: border-radius 15s, background-color 5s;
+   
+}
+#boton:hover{
+    background-color: rgb(221, 31, 31);
+    color: black;
+    border-radius: 999px;
+    
+}

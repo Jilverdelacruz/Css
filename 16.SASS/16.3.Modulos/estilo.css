@@ -1,0 +1,17 @@
+#cabecera {
+  width: 1200px;
+  margin: auto;
+  border: 1px solid red;
+}
+#cabecera h2 {
+  color: blue;
+}
+
+#menu ul li {
+  display: block;
+  float: left;
+  counter-reset: green;
+  margin-left: 10px;
+}
+
+/*# sourceMappingURL=estilo.css.map */

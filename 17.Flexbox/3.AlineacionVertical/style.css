@@ -1,0 +1,42 @@
+
+#header{
+    text-align: center;
+    
+}
+#wrap{
+    display:flex;
+    flex-flow: wrap row;
+    border:1px solid green;
+    padding:5px;
+    height: 600px;
+}
+.caja{
+    /* flex-basis: calc((100% / 3) - 70px); */
+    border:1px solid black;
+    margin:10px;
+    text-align: center;
+    padding:20px;
+    flex-grow: 1;
+    
+
+}
+.roja{
+    align-self: flex-end;
+    order:2;
+    background-color: red;
+}
+.verde{
+    align-self: flex-end;
+    flex-shrink: -4;order:1;
+    background-color: green;
+}
+.gris{
+    align-self: center;
+    order:-1 ;
+    background-color: gray;
+}
+.azul{
+    align-self: flex-start;
+    order: -2;
+    background-color: blue;
+}

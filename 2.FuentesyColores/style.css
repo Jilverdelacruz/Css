@@ -1,0 +1,19 @@
+@font-face{
+    font-family: Prueba;
+    src: url(Montserrat/Montserrat-Regular.ttf);
+}
+h1{
+    background: brown;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 100px;
+    font-weight:900;
+    font-style: italic;
+    color: #FF5733;
+}
+h3{
+    font-family:Prueba;
+    color: rgb(88, 164, 163);
+}
+p{
+    color:rgba(88, 164, 163, 0.2)
+}

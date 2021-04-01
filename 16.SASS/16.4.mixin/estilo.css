@@ -1,0 +1,15 @@
+#cabecera {
+  color: green;
+  font-size: 30px;
+  border-radius: 999px;
+  border: 1px solid red;
+}
+
+#menu {
+  color: red;
+  font-size: 13px;
+  box-shadow: 2px 2px 3px green;
+  width: 150px;
+}
+
+/*# sourceMappingURL=estilo.css.map */

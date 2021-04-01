@@ -1,0 +1,12 @@
+*{
+    padding: 0px;
+    margin:0px
+}
+@font-face{
+    font-family: lato;
+    src: url(fuentes/Lato/Lato-Regular.ttf);
+}
+@font-face{
+    font-family: roboto;
+    src: url(fuentes/Roboto/Roboto-Regular.ttf);
+}

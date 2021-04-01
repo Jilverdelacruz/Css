@@ -1,0 +1,25 @@
+body{
+     background-image: url(fondo3.jpg);
+     background-repeat: no-repeat;
+     background-size: 100% ;
+     background-attachment:fixed;
+     background-position: left bottom;
+     text-align: center;
+    
+}
+h3{
+    background-image: url(descarga.jpg);
+    border: 4px solid rebeccapurple;
+    background-repeat: no-repeat;
+    background-size:100%;
+
+    text-decoration: line-through;
+    letter-spacing: 4px;
+    word-spacing: 8px;
+    text-transform: lowercase;
+    
+}
+p{
+    line-height: 90px;
+    text-indent: 5px;
+}

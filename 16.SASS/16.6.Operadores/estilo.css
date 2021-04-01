@@ -1,0 +1,12 @@
+.general {
+  border: 2px solid red;
+  width: 1500px;
+  margin: auto;
+}
+.general .tarjeta {
+  width: 53.5714285714%;
+  border: 1px solid green;
+  height: 40px;
+}
+
+/*# sourceMappingURL=estilo.css.map */
