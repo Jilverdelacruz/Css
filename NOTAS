@@ -28,6 +28,7 @@ con el signo mayor se indica específicamente quien es el padre y el hijo que se
     background: red !important ,  lal unica manera que este predomine es colocarle  !important
 }
 FUENTE Y COLORES
+https://htmlcolorcodes.com/es/nombres-de-los-colores/ 
 fuentes
 font-family:Arial, Helvetica, sans-serif; colocar tipo de letra
 font-size: 100px; tamaño de la letra
@@ -66,12 +67,38 @@ SI EN CASO NO DESEAS UTILIZAR EL PADDING PORQUE AVECES DESCUADRA LOS BLOQUES, PU
 height, Y UTILIZAR UN LINE-HEIGHT
 EN LOS MARGENES TAMBIEN SE PUEDE COLOCAR NEGATIVO.
 margin: 10px 10px 40px 200px (ARRIBA, DERECHA, ABAJO, IZQUIERZ)
+margin: 10px 10px; indica (arriba-abajo, derecha izquierda)
+margin: 10px 10px 40px (cuando hay 2 el segundo es igual que el 4 que sería izquierda = DERECHA)
+margin: 0 auto // Se recomienda colocar  el auto tanto izquierda y derecha ya que si se coloca directo auto aveces hay problemas cuando se usa flex.
+COLAPSO DE MÁRGENES:
+1. SI AMBOS BLOQUES TIENEN MARGENES, TOMA EL MARGEN MAYOR:
+.caja1{
+    margin-bottom: 5px    
+} 
+.caja2{
+    margin-top:4px
+}
+*el total de márgenes entre la cajas es de 5 px y 4 de ellos será tomado por la caja2.
 margin-top: 20px; puede colarse de esta manera }
 max-width: 350px;
 min-width: 100px;
 line-height: 240px; posicionas el contenido verticalmente
+* DE MANERA PREDETERMINADA LOS PADDING SUMAN A LOS TAMAÑOS DEL BLOQUE, PERO SI SE COLOCA:
+box-sizing: border-box;  // los paddinf no cambia el tamaño del bloque.
+EL ELEMENTO HIJO PUEDE HEREDAR
+.padre{
+    padding: 5px
+    color:red
+}
+.hijo{
+    padding:inherit // coloca el mismo padding que el padre
+    color: initial // aqui quita la herencia
+}
 padding-top: 100px; puede colocar right, left, top, bottom al igual que los margenes
 PARA POSICIONAR EN FORMA HORIZONAL SE NECESITA QUE SE CONSIDERE COMO CAJA
+*todo bloque puede usar margin y cambiar de posisicón
+en el caso de menu es un elemento en línea y no puedes colocar margin por ende se convierte en bloque
+display: inline-block; // de línea pasa a bloque y se puede colocar margen
 display:block, inline   (bloque como el div, no bloque como el p, a, etc), sirve cuando utilizamos el un menu 
 el elemento a lo podemos convertir en block para que todo el bloque puedas seleccionar y no solo la letra
 float:left,right  (se pone en linea horizontal una vez se convsidere bloque)
