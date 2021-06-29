@@ -96,6 +96,8 @@ COLAPSO DE MÁRGENES:
 }
 *el total de márgenes entre la cajas es de 5 px y 4 de ellos será tomado por la caja2.
 margin-top: 20px; puede colarse de esta manera }
+BLOQUES - width
+* SI EN CASO ES UNA IMAGEN Y FORZAMOS PARA QUE USE WIDTH Y HEIGHT DEL MISMO TAMAÑO Y NO SE PIERDA LA CALIDAD DE IMAGEN SE USA: object-fit: cover;
 max-width: 350px;
 min-width: 100px;
 line-height: 240px; posicionas el contenido verticalmente
@@ -133,8 +135,27 @@ texto SOMBRAS
 text-shadow: -3px -4px 5px black; 
 box-shadow: -3px -4px 5px black inset; INSET ES OPCIONAL SOMBRA INTERNA
 ( eje x (negativo izquierda, positivo derecha), eje y (negativo arriba, positivo abajo) densidad, color)
+**PUEDE AGREGAR VARIAS SOMBRAS 
+box-shadow: iz-der, arr-abaj, difuminado, tamaño, color
+.img{
+    display: block;
+    color: gray; 
+    width: 700px;
+    margin: 10px auto;
+    box-shadow: 0px 500px 80px -50px #BC0203,
+                3px 3px 12px currentColor, // curre.. colocará el color por defecto o el color que elegiste para la caja
+                4px 4px 13px red,
+                6px 6px 15px black
+}
+filter:drop-shadow(10px 10px 20px gold) (horizontal/vertical/blur o difuminado) // Cuando es una imagen PNG puede dar sombra a la imagen directa sin el fondo.
 BORDES
+border: 1px solid black // width- style - color
+Más customizado
+border-width: 10px 5px 20px 30px; (arriba- derecha- abajo - izquierda)
+border-style: ridge dashed dotted solid ;
+border-color: blueviolet wheat aqua white;
 border-radius: 999px;  SE ES UN CUADRADO LO PASARÁS A CIRCULO
+border-radius: 50%; otra opción de convertirlo a círulo
 border-radius: 10px 20px 15px 60px;  (izquierda superior, derecha superior, abajo derecho, abajo izquierdo)
 POSICIONAMIENTO y overflow
 overflow: hidden;  (HIDDEN corta el texto depende al tamaño de caja, VISIBLE, SCROLL)
