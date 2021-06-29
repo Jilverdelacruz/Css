@@ -4,11 +4,27 @@
 1.3 selector id #
 1.5 selector clase .
 1.6 selector atributo
+[href]{ // hago referencia al atributo
+    color:red
+}
+a[href^='https']{ // indica ^ que despues de https tiene más cosas
+    color:red
+}
+a[href$='inicio']{  // indica $ que antes de inicio hay más cosas
+    color:red
+}
+a[href*='inicio']{ // indica * antes y despues de inicio habrá contenido
+    color:red
+}
+h2+p{  // le indica que el hermano siguente de h2 
+    color:blue
+}
+
+h3~p{  // le indica que los hermanos sigueintes
+    color: red;
+}
 input[type="text"]{ se está llamando a elemento input con el atributo text
     margin-top: 15px;
-}
-h1[id^="ti"]{
-    color: blueviolet;
 }
 
 se esta llamando a cada elemento del form para poder aplicar el block
