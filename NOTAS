@@ -62,11 +62,15 @@ usualmente se utiliza la regular
  colores rgba (aqui incluye la trasnparencia) https://www.css3maker.com/css-3-rgba.html
  FONDOS Y TEXTOS
     background-image: url(fondo3.jpg); colocar imagen de fondo
+    background-image: url('./img/spidy.png'), url('./img/cloud.png'); // puede colocar varias imagenes
      background-repeat: no-repeat; no repite la imagen
-     background-size: 100% ; tamaño de la pantalla 
-     background-attachment:fixed; para que se quede quieta en scrool
-     background-position ???: left bottom; a posición de la imagen de fondo
+     background-size: 100% ; tamaño de la pantalla
+     background-size: cover; /*se acomoda la imagen al tamaño del bloque*/
+     background-attachment:fixed; para que se quede quieta en scrool pero ocupa el 100% del navegador
+     background-position: center; /* x y (400px 200px)*/
      background-position: -200px -200px; tambien le puedes dar ( x, y)
+     background-image: linear-gradient(to bottom,#a8c0ee5d, #f9c3ec7e),
+    url(./img/hero.jpg);   
 TEXTOS
 list-style: es para quitar el estilo de punto en las li pero tambien puedes cambiar de forma como (circle, square)
 text-align: center, right, left, justify ; centrar texto o imagen puede justificar el parrafo para que se vean mejor los parrafos
