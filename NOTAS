@@ -71,8 +71,35 @@ usualmente se utiliza la regular
      background-position: -200px -200px; tambien le puedes dar ( x, y)
      background-image: linear-gradient(to bottom,#a8c0ee5d, #f9c3ec7e),
     url(./img/hero.jpg);   
+UNIDADES DE MEDIDA
+REM
+* Para los textos es mejor usar rem, porque a diferencia de pixeles que son medidas fijas, estas medidas son relativas es decir se acomodan como el porcentaje pero para texto.
+por ejem:
+html{
+    font-size: 16px; // esto viene por defefecto, se considera que 16px equivale a 1 rem, si en caso se edita se le coloca 20px entonces 1 rem equivaldra a 20px.
+    
+}
+EM
+Usualmente se utiliza para los padding margin, siempre toma como referencia el font-size, si no lo tiene lo tomará del padre y sino el que viene por defecto que es 16px en este caso 16px equivale 1em
+p{
+    
+    font-size: 3rem; // tomando en cuenta que ahora el font size es 48 (16*3)
+    border: 1px solid black;
+    padding: 1em;  por aquí evale a 48
+}
+%
+Los porcentajes usualmente se usa para los width y height, con respecto al height no le puedes dar un porcentaje si su caja padre no tiene una medida fija.
+Viewport
+vw: 100% ocupará todo el ancho de la pantalla.
+vh: 100% ocupará toda la altura de la pantalla.
+
+
 TEXTOS
+
 list-style: es para quitar el estilo de punto en las li pero tambien puedes cambiar de forma como (circle, square)
+list-style-type: georgian; // cambia el ícono de la lista
+list-style-image: url(./img/icono.png); // en vez del que viene por defecto le agregas un icono a la lista
+list-style-position: inside; // ese ícono que colocamos estará dentro del li
 text-align: center, right, left, justify ; centrar texto o imagen puede justificar el parrafo para que se vean mejor los parrafos
 line-height: 90px;   separado entre las lineas
 text-decoration: line-through,underline  tachado, y raya abajo
@@ -175,7 +202,8 @@ PSEUDOCLASES
 .lista  li:last-child el ultimo del li
 .lista2 li a:link cuando aun no se ha hecho click
 .lista2 li a:visited cuando ya se hizo click
-.lista2 li a:hover cuando pasas por el link
+.lista2 li a:active se ejecuta mientras estemos dando click
+#objetivo:target  Manipula un obetivo.
 input[type="text"]:focus cuando ingresas al input
 input[type="submit"]:active cuando mantienesp presionado
 PSEUDOELEMENTOS
