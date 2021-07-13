@@ -197,6 +197,7 @@ position: absolute;  absoluta no intersa como está el retro lo puede moder a tu
     left: 41%; o se le agrega un display block para poder moverlo a gusto
 position: fixed ; se usa usualmente para imagenes cuando se haga scroll la imagen se queda pegada y te sigue.
 PSEUDOCLASES
+:root // hace referencia a todo el html usualmente se coloca aqui las variables
 .lista  li:first-child  amarra solo la primera del li
 .lista  li:nth-child(2) el numero de orden del li
 .lista  li:last-child el ultimo del li
@@ -205,9 +206,24 @@ PSEUDOCLASES
 .lista2 li a:active se ejecuta mientras estemos dando click
 #objetivo:target  Manipula un obetivo.
 input[type="text"]:focus cuando ingresas al input
-input[type="submit"]:active cuando mantienesp presionado
+.form:focus-within // modifica al elemento padre tomando en cuenta que el hijo deba ser un input
+input[type='checkbox']:checked + label // indica que si le diste check modifica al elemento de lado.
+h3:not(.title):not(:hover) // indica que mientras no tenga la clase o no halla un hover aplica caso contrario no lo aplica.
+input[type="submit"]:active cuando mantienes presionado
+box:only-of-type // indica que solo aplica para elemeneto unico en su tipo
+.box:first-of-type // el primer e su tipo
+.box:last-of-type{ // el ultimo de su grupo
+.box:nth-of-type(odd) // los impares 
+.box:nth-of-type(even) // los pares 
+.box:nth-of-type(2n) // hace referencia a los numeros pares  2*0= 0  2*1=2 2*2=4 2*5=10
+.box:nth-of-type(n) // todos 
+.box:nth-of-type(2n+1) // impares   2*0= 0 +1 = 1    2*1= 2+1 = 3
 PSEUDOELEMENTOS
-
+.card__title::first-letter // solo edita la pimera letra
+p::first-line // afecta a la primera line
+p::selection // seleciona el bloque
+.card__title::first-letter // afecta  la primera letra
+input[type='text']::placeholder // modificamos solo el placeholder
 
 TRANSICIONES
 transition: all 500ms; todo los cambios en 500 milisegundos
