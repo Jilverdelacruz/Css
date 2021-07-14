@@ -192,10 +192,12 @@ POSICIONAMIENTO y overflow
 overflow: hidden;  (HIDDEN corta el texto depende al tamaño de caja, VISIBLE, SCROLL)
 overflow: scroll; ( puede ser -x para scroll horizonal o -y verifical)
 POSICIONAMIENTO
-position: absolute;  absoluta no intersa como está el retro lo puede moder a tu preferencia
-    top: 51%;   
-    left: 41%; o se le agrega un display block para poder moverlo a gusto
-position: fixed ; se usa usualmente para imagenes cuando se haga scroll la imagen se queda pegada y te sigue.
+position: relative; Aqui funciona el top,left,... y Cuando se mueve lo hace a partir de su posición inicial
+position: absolute;  El esacio donde se encontraba se borra, No reconoce su posición inicial y toma como referencia su padre siempre y cuando el padre tenga un posicionamiento relativo o fixed
+    top: 51%;  51% toando como referencia al padre que sea relativo o fiex, si en caso no lo tiene su padre será el mismo body
+    left: 41%;
+    z-index: 1 // se aplia para colocar encima del otro elemento predetermino tiene el 0, lo ideal es manerjaro de 10 en 10.
+position: fixed ; se mueve con respecto al DOM. y queda estático
 PSEUDOCLASES
 :root // hace referencia a todo el html usualmente se coloca aqui las variables
 .lista  li:first-child  amarra solo la primera del li
@@ -224,7 +226,33 @@ p::first-line // afecta a la primera line
 p::selection // seleciona el bloque
 .card__title::first-letter // afecta  la primera letra
 input[type='text']::placeholder // modificamos solo el placeholder
-
+.card__title::before{ // el befor aplicará  antes del elemento selecionado.
+    content: "";   // siempre tiene que tener un content
+    display: block; // siempre se coloca un display para ver si es un bloque 
+    width: 100%;
+    height: 10px;
+    background-color: salmon;
+    padding: 2px;
+}
+.card__title::after
+Ejem: // se ubica en el Pseudoelementos
+ul{
+    counter-reset: contador; // se crea un contador
+}
+li::before{
+    content: counter(contador); // se agrega el contenido del contador que se creó
+    counter-increment: contador; // esto hará que se cree uno numero contador
+    display: inline-block;
+    text-align: center;
+    width: 30px;
+    height:30px;
+    line-height: 35px;
+    background-color: salmon;
+    color: white;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-right: 10px;
+}
 TRANSICIONES
 transition: all 500ms; todo los cambios en 500 milisegundos
 transition: border-radius 15s, background-color 5s; tambien se puede poner varios pero 
