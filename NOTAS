@@ -392,3 +392,20 @@ grid-template-areas:  reemplaza a los grid-colum y grid row
     ". menu ." indica que la segunda fila hay un bloque de vacio al inicio y al final
     " contenido1 contenido2 lateral"
     "pie pie pie"
+*******SCROLL******
+scroll-behavior: smooth; Se aplica en * para que todo el scroll que realice lo hará de manera suave ejem: Practica-posicionamiento/menu 
+
+***VARIABLES*****
+:root{  /*para que todos los elementos la usen*/
+    --color-primario: gray;  // CREAMOS UNA VARIABLES
+}
+
+.card2__copy{
+    margin: 1em 0;
+    color: var(--color-primario); // USAMOS UNA VARIABLE
+   }
+Fallbacks : indica que usa ese valor en caso de que no encuentre la variable
+.card2__copy{
+    margin: 1em 0;
+    color: var(--color-primario00, var(--colorPredeterminado)); o solo le puedes dar un valor, el segundo cogerá si no encuentra el primero
+   }
