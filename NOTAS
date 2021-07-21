@@ -284,7 +284,34 @@ simplemente se pone en la clase clear:both para limpiar y en el siguiente bloque
 REPONSIVE
 Todas las medidas se debería usar con porcentaje
 MEDIAS QUERY
-@media (max-width: 388px) nos indica que desde 0 a 388px ejecutará un cambio
+Se hace llamo al concepto de  breaking point (Punto de quiebre)
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+width=device-width : Para que el tamaño del archivo sea a la del dispositivo 
+Initial-scale=1.0 : Para ver con zoom inicia puede colocar 2 tambien
+orientation:landscape  se manera horizonal donde el width es mayor al height
+orientation:portrait : se de manera vertical donde el height es mayor a width
+Movil first // Se empieza de Móvil a Desktop
+Desktop first // se empieza de desktop a m+ovil
+@media screen and ( max-width:600px){ // si pasa de 600 ya no aplica
+ .title{
+     color:blue;
+ }
+}
+@media screen and ( min-width:600px){ // de 600 para ariba
+ .title{
+     color:blue;
+ }
+}
+@media screen and ( min-width:600px), (orientation:landscape){ /*la , hace referencia a un or (o uno o el otro)*/
+ .title{
+     color:blue;
+ }
+}
+@media screen and ( min-width:600px) and (orientation:landscape){ /* el and hace referencia a que tiene que tener uno y el otro*/
+ .title{
+     color:blue;
+ }
+}
 VIEW PORT 
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> para el tamaño de contenido se adapte al tamaño del dispositivo
 
