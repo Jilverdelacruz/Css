@@ -302,7 +302,7 @@ Desktop first // se empieza de desktop a m+ovil
      color:blue;
  }
 }
-@media screen and ( min-width:600px), (orientation:landscape){ /*la , hace referencia a un or (o uno o el otro)*/
+@media screen and ( min-width:600px), (orientation:landscape){ /*la ',' hace referencia a un or (o uno o el otro)*/
  .title{
      color:blue;
  }
@@ -436,3 +436,13 @@ Fallbacks : indica que usa ese valor en caso de que no encuentre la variable
     margin: 1em 0;
     color: var(--color-primario00, var(--colorPredeterminado)); o solo le puedes dar un valor, el segundo cogerá si no encuentra el primero
    }
+
+***BEM*****
+Block Eelement Modifier
+Es una metodología  que nos permite crear código css más organizado, flexible, moduloar y reutilizable.
+<div class="card"> // aqui tenemos a un eiquteta padre por ende se llama a class como bloque
+        <img class="card__img" src="./img/cel.jpg"> 
+        <div class="card__text"> esta es una etiqueta hijo por ende viene a ser elemento card__img
+            <p class="card__list card__list--yellow">Especialistas en diseño UX/UI</p> el de aqui ya tiene un atributto porque va ser color especial
+        </div>
+</div>
