@@ -365,37 +365,71 @@ $contador: 1;
         
     }
 FLEXBOX
-Cuando se quiere empezar utilizar se debe colocar un div.
+El flexbox es un módulo de css para poderadaptar nuestra estructura a la pantalla, pero es considerado como unidireccionalya que solo trabajará en una dirección (flex-direcion)
+Main Axis = Eje principal (depende de lo que se coloque en flex-direction)
+cross axis= eje transversal (el eje que lo cruza)
+
 display: flex alinea los bloques hijo en fila
-display:inline-flex; alinea los bloques en fila y el div se acomoda a los bloques hijos
+display:inline-flex; alinea a los hijo pero deja de ser un elemento padre de bloque
 flex-wrap: wrap; hace que los bloques no se salga del contenedor
 flex-direction: row; lo acomoda en fila por defecto
 flex-direction: row-reverse; los acomoda en fila pero del ultimo al primero y de izquierda a derecha
 flex-direction: column-reverse; ordena por columa del ultimo al primero
 flex-direction: column; los ordena por columna al realizar esto, se invierte el justify-content: y el align-items
 flex-flow: wrap row-reverse; con esto acabarca los wrap y direction
-order:-1 se puede utilizar cuando ningun bloque tiene un order y quieremos ponerlo primero, si en caso se le pone un order se le da un número a cada boque
-flex-grow: 1; se aplica a los div hijos y le das un tamaño estandar a todos o le puedes dar un tamaño diferente a cada caja
-Para poner mas pequeños las cajas se utiliza dos:
-flex-grow:0
-flex-basis: calc((100% / 3) - 70px); es igual que el with se le da la anchura que se necesita pero no es automatico como el grow
-Alineciación Horizonal
-justify-content: space-between; no deja margen a los extremos
+
+*Todo lo que hace justify lo aplicará al eje principal (main axis)
+justify-content: space-between; no deja margen a los extremos pero el tamaño de margen de los elementos del centro
+son más grandes (porque tiene un margen derecho de un elmento y un margen izquierdo del elemento de lado)
+justify-content: space-evenly; Dejar los margentes del mismo tamaño tanto extremos como los elementos del centro.
 justify-content: space-around; deja margen a los extremos
-justify-content: space-evenly; igual que el around pero con un poco de mrgen adcional
 justify-content: center; centrado
 justify-content: flex-end; a la izquierda
-Alineacion vertical
+
+*todo lo que realice align tems o align content lo realizará al eje transcersal (cross axis)
 Cuando lo haces desde el div padre
 align-items: center;  centras todas las cajas hijas
-align-content: center, se aplica cuando son mas de dos filas hijas los junta todas.
+align-content: center, se aplica cuando son dos filas o mas elementos hijas los junta todas.
 align-items: flex-end; pones al ultimo todas las cajas  hijas  
 align-items: flex-start; pones al principio todas las cajas hijas
-align-items: flex-baseline; se alinean al texto
+align-items: flex-baseline; se alinean al contenido
+
 Cuando lo haces desde el div hijo
+order: de manera predeterminado es 0 (puede colocarse valores negativo y cambia el orden es de menor a mayor siguiend el main six)
+flex-grow: 1; : no se amditen valores negativos, y se adiciona al tamaño del bloque hijo que saca del espacio que tiene sobrante.
+flex-shrink:1  :no se amditen valores negativos, y encoge al bloque hijo que saca del espacio que tiene "faltante".
+(por ejemplo el padre mide 400 px y tiene 3 bloques hijo de 200px hay un espacio faltante de 200)
+flex-basis: es el tamaño original del bloque y tiene mas especificidad que el mismo with.
+ flex: 1 1 0 = flex: auto // indica el grow, shrink y basis
 align-self: flex-start; para que la caja hija se falla al innicio
 align-self: flex-end;  para que la caja hija se falla al final
 align-self: center;  para que la caja hija se falla al centro
+margin-left: ocupta el margent todo el izquierdo y lo coloca el bloque a lado derecho funciona con cualquir dirección.
+por ejemplo se había un elemento a su derecha empujaba tambin a ese elemtno al extremo derecho.
+gap: se usa cuando queremos darle un espacio reemplazando al margen.
+Caundo se trabaja con imagenes tiene dos opciones 
+1: usar como backgorun-image
+y en el css:
+.figure{
+    flex-basis:50%;
+    height:100%;
+    backgorund-image:url(img.jpg);
+    backgroun-position:cente;
+    background-size: cover
+}
+Aqui podemos darle un tamaño flexible as la imagen
+<figure class='figure'>
+    <img src='....'>
+</figure
+.figure{
+    flex-basis:50%;
+    height:100%;
+}
+img {
+    width:100%;
+    height:100%
+}
+2.  se agrega figure dentro una imagen
 GRID 
 sno ayuda maquetar a la web y se trabja con div padre
 display: grid; en el div padre colocar le display
